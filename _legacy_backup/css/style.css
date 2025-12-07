@@ -1,0 +1,312 @@
+/* 
+ * Personal Portfolio - Redesign Styles
+ * Premium Dark/Neon Theme with Glassmorphism
+ */
+
+:root {
+    /* Color Palette - Deep Space & Neon */
+    --bg-body: #050505;
+    --bg-surface: rgba(20, 20, 25, 0.6);
+    --bg-glass: rgba(255, 255, 255, 0.03);
+
+    --primary: #4cc9f0;
+    /* Neon Cyan */
+    --primary-glow: rgba(76, 201, 240, 0.5);
+
+    --secondary: #7209b7;
+    /* Neon Purple */
+    --secondary-glow: rgba(114, 9, 183, 0.5);
+
+    --text-main: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.6);
+
+    /* Typography */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Spacing */
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+
+    /* UI Elements */
+    --radius-sm: 8px;
+    --radius-md: 20px;
+    --radius-full: 9999px;
+
+    --transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* 3D Background Canvas */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Typography Overrides */
+h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-md);
+    background: linear-gradient(to right, #fff, var(--text-muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Navigation - Hamburger */
+.nav-toggle-btn {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 100;
+    background: var(--bg-glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    transition: var(--transition-smooth);
+}
+
+.nav-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.hamburger {
+    width: 24px;
+    height: 2px;
+    background: white;
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: var(--transition-smooth);
+}
+
+.hamburger::before {
+    transform: translateY(-8px);
+}
+
+.hamburger::after {
+    transform: translateY(8px);
+}
+
+/* Active State for Hamburger */
+.nav-toggle-btn.active .hamburger {
+    background: transparent;
+}
+
+.nav-toggle-btn.active .hamburger::before {
+    transform: rotate(45deg);
+}
+
+.nav-toggle-btn.active .hamburger::after {
+    transform: rotate(-45deg);
+}
+
+/* Full Screen Menu */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(20px);
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-smooth);
+}
+
+.fullscreen-menu.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.menu-links {
+    list-style: none;
+    text-align: center;
+}
+
+.menu-links li {
+    margin: var(--spacing-md) 0;
+    overflow: hidden;
+}
+
+.menu-links a {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    transform: translateY(100%);
+}
+
+.fullscreen-menu.active .menu-links a {
+    transform: translateY(0);
+}
+
+.menu-links a:hover {
+    color: var(--primary);
+}
+
+/* Layout Utilities */
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: var(--spacing-xl) 0;
+}
+
+/* Glass Cards */
+.glass-card {
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    transition: var(--transition-smooth);
+}
+
+.glass-card:hover {
+    border-color: var(--primary-glow);
+    box-shadow: 0 0 30px var(--primary-glow);
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: var(--radius-full);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #000;
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.btn-primary:hover {
+    background: #fff;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    background: #111;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    border: 1px solid var(--primary);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

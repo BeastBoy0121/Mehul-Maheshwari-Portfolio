@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Creative Developer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&family=Space+Grotesk:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 3D Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation Toggle -->
+    <button class="nav-toggle-btn" id="nav-toggle" aria-label="Toggle menu">
+        <span class="hamburger"></span>
+    </button>
+
+    <!-- Full Screen Menu -->
+    <nav class="fullscreen-menu" id="fullscreen-menu">
+        <ul class="menu-links">
+            <li><a href="#home" class="menu-link">Home</a></li>
+            <li><a href="#about" class="menu-link">About</a></li>
+            <li><a href="#projects" class="menu-link">Projects</a></li>
+            <li><a href="resume.html" class="menu-link">Resume</a></li>
+            <li><a href="#contact" class="menu-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="section">
+            <div class="container">
+                <h1>Building Digital <br> <span style="color: var(--primary)">Realities</span></h1>
+                <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin-bottom: 2rem;">
+                    Creative Developer specializing in immersive web experiences and 3D interactions.
+                </p>
+                <a href="#projects" class="btn btn-primary">Explore Work</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="glass-card">
+                    <h2>About Me</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+                        I bridge the gap between design and engineering. With a passion for 3D graphics and user
+                        experience, I create websites that leave a lasting impression.
+                    </p>
+                    <p style="color: var(--text-muted)">
+                        Stack: JavaScript, Three.js, React, Node.js
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Selected Works</h2>
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <article class="glass-card project-card" data-project="1">
+                        <h3>Neon Verse</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem;">Immersive 3D WebGL Experience</p>
+                        <button class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">View
+                            Details</button>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="glass-card project-card" data-project="2">
+                        <h3>Cyber Dashboard</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem;">React-based Data Visualization</p>
+                        <button class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">View
+                            Details</button>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="glass-card project-card" data-project="3">
+                        <h3>Abstract Art</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem;">Generative Art with Canvas API</p>
+                        <button class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">View
+                            Details</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="glass-card" style="text-align: center; padding: 4rem 2rem;">
+                    <h2>Let's Create Together</h2>
+                    <p style="margin-bottom: 2rem; font-size: 1.2rem;">
+                        Have a project in mind? Let's talk.
+                    </p>
+                    <a href="mailto:hello@example.com" class="btn btn-primary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <h2 id="modal-title">Project Title</h2>
+            <p id="modal-desc" style="margin-bottom: 2rem; color: var(--text-muted);">Project Description</p>
+            <div
+                style="background: #000; height: 300px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; border-radius: var(--radius-sm);">
+                <span style="color: var(--text-muted)">Project Preview Image</span>
+            </div>
+            <a href="#" class="btn btn-primary">Visit Live Site</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Three.js as a module -->
+    <script type="module" src="js/three-bg.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
