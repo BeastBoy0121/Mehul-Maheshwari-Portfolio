@@ -6,19 +6,27 @@ import Image from "next/image";
 
 const projects = [
     {
+        title: "Personal Portfolio",
+        description: "A modern, responsive personal portfolio website built with Next.js, React, and Tailwind CSS to showcase skills and projects.",
+        tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+        github: "https://github.com/BeastBoy0121/Mehul-Maheshwari-Portfolio",
+        demo: "#",
+        image: "/portfolio.png",
+    },
+    {
         title: "Linux Custom Shell",
         description: "Developed a custom Linux Shell with fuzzy autocomplete, file search, and process monitoring using Python and C. Enhanced OS interaction and control.",
         tags: ["Python", "C", "System Programming", "Linux"],
-        github: "#",
-        demo: "#",
+        github: "https://github.com/BeastBoy0121/",
+        demo: "",
         image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=2074&auto=format&fit=crop",
     },
     {
         title: "Traffic Analyzer",
         description: "Command-line tool to analyze TCP traffic by capturing packets and filtering based on TCP header flags (SYN, ACK, FIN) using Python and Scapy.",
         tags: ["Python", "Networking", "Wireshark", "Scapy", "TCP/IP"],
-        github: "#",
-        demo: "#",
+        github: "https://github.com/BeastBoy0121/",
+        demo: "",
         image: "/traffic_analyzer.png",
     },
 ];
@@ -67,14 +75,16 @@ export function Projects() {
                                     >
                                         <Github className="h-5 w-5 text-foreground" />
                                     </a>
-                                    <a
-                                        href={project.demo}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="p-2 bg-background rounded-full hover:scale-110 transition-transform"
-                                    >
-                                        <ExternalLink className="h-5 w-5 text-foreground" />
-                                    </a>
+                                    {project.demo && (
+                                        <a
+                                            href={project.demo}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="p-2 bg-background rounded-full hover:scale-110 transition-transform"
+                                        >
+                                            <ExternalLink className="h-5 w-5 text-foreground" />
+                                        </a>
+                                    )}
                                 </div>
                             </div>
 
