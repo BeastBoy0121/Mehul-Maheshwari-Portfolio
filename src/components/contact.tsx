@@ -92,7 +92,7 @@ export function Contact() {
                             </div>
                             <div>
                                 <h3 className="text-lg font-semibold mb-1">Email</h3>
-                                <p className="text-muted-foreground">maheshwarimehul01@gmail.com</p>
+                                <p className="text-muted-foreground">maheshwarimehulofficial@gmail.com</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-4">

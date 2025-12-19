@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mehul Maheshwari - Personal Portfolio
 
-## Getting Started
+A modern, high-performance personal portfolio website built to showcase my software development skills, projects, and professional journey. Designed with a focus on interactivity, aesthetics, and performance.
 
-First, run the development server:
+![Portfolio Preview](./public/images/og-image.png)
+*(Note: Replace with actual screenshot later if needed)*
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **🌓 Dynamic Theme Switching**:
+  - **Light Mode**: Features a clean, interactive "Dot Grid Ripple" background.
+  - **Dark Mode**: Immerses users in a "Particle Network" constellation effect.
+- **🌌 Interactive Hero Section**: Canvas-based animations that react to user interaction.
+- **📱 Responsive Design**: Fully optimized for desktops, tablets, and mobile devices.
+- **📄 Digital Resume**: Dedicated resume page with optimized print styles and PDF download support.
+- **📧 Contact Integration**: Functional contact form powered by EmailJS.
+- **⚡ High Performance**: Built with Next.js App Router and optimized with Tailwind CSS.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) & HTML5 Canvas
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Email Service**: [EmailJS](https://www.emailjs.com/)
+- **Deployment**: [Vercel](https://vercel.com)
 
-## Learn More
+## 🚀 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/BeastBoy0121/PersonalPortfolio.git
+    cd PersonalPortfolio
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
-## Deploy on Vercel
+4.  **Open your browser:**
+    Navigate to [http://localhost:3000](http://localhost:3000).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app`: App Router pages and layouts.
+- `src/components`: Reusable UI components (Hero, Navbar, Projects, etc.).
+- `src/components/ui`: Specialized visual effects (Particle Network, Dot Grid, etc.).
+- `public`: Static assets (images, icons).
+
+## 📬 Contact
+
+Feel free to reach out to me for collaborations or opportunities!
+- **LinkedIn**: [Mehul Maheshwari](https://www.linkedin.com/in/mehul-maheshwari-mm/)
+- **Email**: maheshwarimehulofficial@gmail.com

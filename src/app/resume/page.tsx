@@ -62,7 +62,7 @@ export default function ResumePage() {
                         <div className="flex flex-col gap-2 text-sm text-muted-foreground">
                             <div className="flex items-center gap-2">
                                 <Mail className="h-4 w-4" />
-                                maheshwarimehul01@gmail.com
+                                maheshwarimehulofficial@gmail.com
                             </div>
                             <div className="flex items-center gap-2">
                                 <Phone className="h-4 w-4" />

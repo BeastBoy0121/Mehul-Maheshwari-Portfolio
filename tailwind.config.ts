@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-    darkMode: ["class"],
+    darkMode: "class",
     content: [
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -55,28 +55,6 @@ const config: Config = {
                 lg: "var(--radius)",
                 md: "calc(var(--radius) - 2px)",
                 sm: "calc(var(--radius) - 4px)",
-            },
-            animation: {
-                aurora: "aurora 60s linear infinite",
-                meteor: "meteor 5s linear infinite",
-            },
-            keyframes: {
-                aurora: {
-                    from: {
-                        backgroundPosition: "50% 50%, 50% 50%",
-                    },
-                    to: {
-                        backgroundPosition: "350% 50%, 350% 50%",
-                    },
-                },
-                meteor: {
-                    "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
-                    "70%": { opacity: "1" },
-                    "100%": {
-                        transform: "rotate(215deg) translateX(-500px)",
-                        opacity: "0",
-                    },
-                },
             },
         },
     },
