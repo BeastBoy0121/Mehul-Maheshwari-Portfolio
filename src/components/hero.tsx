@@ -4,28 +4,33 @@ import { motion } from "framer-motion";
 import { ArrowRight, Github, Instagram, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { ParticleNetwork } from "@/components/ui/particle-network";
+import { DotGridRipple } from "@/components/ui/dot-grid-ripple";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export function Hero() {
+    const { resolvedTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
     return (
         <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-20 relative overflow-hidden">
-            {/* Background Elements */}
-            <div className="absolute inset-0 -z-10 overflow-hidden">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse delay-1000" />
-            </div>
-
-            <ParticleNetwork className="absolute inset-0 z-0" />
+            {/* Background Options - Theme Based */}
+            {mounted && (
+                <>
+                    {resolvedTheme === 'light' ? (
+                        <DotGridRipple className="absolute inset-0 z-0" />
+                    ) : (
+                        <ParticleNetwork className="absolute inset-0 z-0" />
+                    )}
+                </>
+            )}
 
             <div className="container px-4 mx-auto z-10">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-                    {/* Image Column - Left on Desktop (via order-last or flex-row-reverse if source is swapped) 
-                        Let's use Source Order: [Image, Text] for standard "Image Top" on mobile if we want that, 
-                        OR [Text, Image] for "Text Top" on mobile. 
-                        Common pattern: Text Top on Mobile. 
-                        So Source: [Text, Image].
-                        Desktop: Image Left -> flex-row-reverse. 
-                     */}
-
                     {/* Text Content */}
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
@@ -104,16 +109,9 @@ export function Hero() {
                         animate={{
                             opacity: 1,
                             scale: 1,
-                            // y: [0, -20, 0], // Option 1: Levitate (Default)
-                            // scale: [1, 1.05, 1], // Option 2: Pulse
-                            // rotate: [0, 5, -5, 0], // Option 3: Wobble
-
                             // Option 4: The Drifter (Current - Space Float)
                             x: [0, 10, -10, 0],
                             y: [0, -15, 10, 0],
-
-                            // scale: [1, 1.1, 1, 1.1, 1], // Option 5: The Heartbeat
-                            // rotateY: [-15, 15], // Option 6: 3D Twist
                         }}
                         transition={{
                             duration: 0.5, // Entrance duration
@@ -129,8 +127,6 @@ export function Hero() {
                                 repeat: Infinity,
                                 ease: "easeInOut",
                             },
-                            // scale: { duration: 1.5, repeat: Infinity, repeatDelay: 1 }, // For Heartbeat
-                            // rotateY: { duration: 5, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }, // For Twist
                         }}
                         className="flex-1 relative order-1 flex justify-center md:justify-center"
                     >

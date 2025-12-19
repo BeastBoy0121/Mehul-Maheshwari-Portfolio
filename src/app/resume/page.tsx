@@ -155,7 +155,7 @@ export default function ResumePage() {
                                     <span className="text-sm text-muted-foreground">July 2019 - July 2023</span>
                                 </div>
                                 <p className="text-muted-foreground">Manipal Institute of Technology, Karnataka</p>
-                                <p className="text-sm text-muted-foreground mt-1">CGPA: 8.1</p>
+
                             </div>
                         </div>
                     </section>

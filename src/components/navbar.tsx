@@ -31,7 +31,7 @@ export function Navbar() {
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="text-xl font-bold tracking-tighter hover:opacity-80 transition-opacity">
-                    Portfolio
+                    Mehul Maheshwari
                 </Link>
 
                 {/* Desktop Navigation */}
