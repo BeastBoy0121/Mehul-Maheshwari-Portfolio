@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Github, Instagram, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
+import { ParticleNetwork } from "@/components/ui/particle-network";
 
 export function Hero() {
     return (
@@ -12,6 +13,8 @@ export function Hero() {
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
                 <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse delay-1000" />
             </div>
+
+            <ParticleNetwork className="absolute inset-0 z-0" />
 
             <div className="container px-4 mx-auto z-10">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-12">
