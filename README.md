@@ -60,4 +60,4 @@ A modern, high-performance personal portfolio website built to showcase my softw
 
 Feel free to reach out to me for collaborations or opportunities!
 - **LinkedIn**: [Mehul Maheshwari](https://www.linkedin.com/in/mehul-maheshwari-mm/)
-- **Email**: maheshwarimehulofficial@gmail.com
+- **Email**: mehulmaheshwariofficial@gmail.com

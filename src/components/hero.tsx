@@ -94,7 +94,7 @@ export function Hero() {
                                 <span className="sr-only">Instagram</span>
                             </a>
                             <a
-                                href="mailto:maheshwarimehulofficial@gmail.com"
+                                href="mailto:mehulmaheshwariofficial@gmail.com"
                                 className="hover:text-foreground transition-colors"
                             >
                                 <Mail className="h-6 w-6" />

@@ -62,15 +62,15 @@ export default function ResumePage() {
                         <div className="flex flex-col gap-2 text-sm text-muted-foreground">
                             <div className="flex items-center gap-2">
                                 <Mail className="h-4 w-4" />
-                                maheshwarimehulofficial@gmail.com
+                                mehulmaheshwariofficial@gmail.com
                             </div>
                             <div className="flex items-center gap-2">
                                 <Phone className="h-4 w-4" />
-                                +91-9119776469 / +971-507759183
+                                +971-507759183/ +91-9119776469
                             </div>
                             <div className="flex items-center gap-2">
                                 <MapPin className="h-4 w-4" />
-                                Bangalore, Karnataka, India
+                                Abu DHabi, UAE/ Bangalore, India
                             </div>
                             <div className="flex items-center gap-2">
                                 <Linkedin className="h-4 w-4" />
